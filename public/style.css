@@ -1,0 +1,95 @@
+body {
+  background: #3E4651;
+  color: #F1654C;
+  text-align: center;
+  font-family: "helvetica", arial, sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 87px;
+  letter-spacing: 5px;
+  z-index: 10;
+  position: relative;
+}
+
+/* Body */
+#wrap {
+  width: 500px;
+  margin: 80px auto;
+  position: relative;
+}
+
+#drag, #drop {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: #3E4651;
+  border-radius: 30px;
+}
+
+#drag {
+  left: 0;
+  border: 2px dashed #F1654C;
+  color: #F1654C;
+  opacity: 1;
+}
+
+#drop {
+  right: 0;
+  border: 2px dashed #48515E;
+  color: #48515E;
+}
+
+/* UI statements */
+#drag:hover {
+  box-shadow: 0 0 20px -5px #F1654C;
+}
+
+.ui-selected {
+  background: #3E4651;
+}
+
+.ui-hover {
+  border: 2px dashed #D4D4D4 !important;
+  color: #D4D4D4 !important;
+}
+
+.ui-active {
+  border: 2px dashed #00B5B5 !important;
+  color: #00B5B5 !important;
+}
+
+.ui-empty {
+  border: 2px dashed #48515E !important;
+  color: #48515E !important;
+}
+
+.ui-highlight {
+  border: 2px dashed #D4D4D4 !important;
+  color: #D4D4D4 !important;
+}
+
+.ui-draggable-dragging {
+  border: 2px dashed #F1654C;
+  z-index: 20;
+  background: #3E4651;
+  border-radius: 30px;
+  opacity: 0.8;
+  width: 160px;
+  height: 35px;
+}
+
+.ui-draggable-dragging p {
+  margin: 0;
+  padding: 10px 10px;
+}
+
+/* transition */
+#drag, #drop {
+  transition: border 300ms ease;
+}
+
+#drag p, #drop p {
+  transition: color 300ms ease;
+}

@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    link(rel='stylesheet', href='style.css')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+    script(src="main.js")
+
+  
+  body
+    h1 Send Yourself A Picture
+    form(id="post", action='/send', method='POST')
+      div#drag
+        input(type='text', name='phone', placeholder='enter a phone number')
+        input(type='text', name='url', placeholder='paste a URL to a photo')
+        input(type='text', name='message', placeholder='optional - include a text message')
+        input(hidden='true',type='submit', value='Send me the picture!')
+      div#drop
+        p.drop Drop here
